@@ -1,3 +1,4 @@
+import 'package:basketball_counter_app/widgets/app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatelessWidget {
@@ -5,6 +6,8 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      appBar: AppBarWidget(),
+    );
   }
 }
