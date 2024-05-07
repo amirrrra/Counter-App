@@ -10,11 +10,11 @@ class BodyWidget extends StatefulWidget {
   });
 
   @override
-  State<BodyWidget> createState() => _BodyWidgetState();
+  State<BodyWidget> createState() => BodyWidgetState();
 }
 
-class _BodyWidgetState extends State<BodyWidget> {
-  int teamPoints = 0;
+class BodyWidgetState extends State<BodyWidget> {
+  static int teamPoints = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class _BodyWidgetState extends State<BodyWidget> {
             text: 'Add 2 point',
             onPressed: () {
               setState(
-                () => teamPoints++,
+                () => teamPoints += 2,
               );
             },
           ),
@@ -63,7 +63,7 @@ class _BodyWidgetState extends State<BodyWidget> {
             text: 'Add 3 point',
             onPressed: () {
               setState(
-                () => teamPoints+=3,
+                () => teamPoints += 3,
               );
             },
           ),
