@@ -12,28 +12,63 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  int teamAPoints = 0;
+  int teamBPoints = 0;
+
+  void pointsAOnPressed(int points) {
+    setState(() {
+      teamAPoints += points;
+    });
+  }
+  void pointsBOnPressed(int points) {
+    setState(() {
+      teamBPoints += points;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const AppBarWidget(),
       body: Column(
         children: [
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               BodyWidget(
                 teamName: 'Team A',
+                teamPoints: teamAPoints,
+                onePointOnPressed: () {
+                  pointsAOnPressed(1);
+                },
+                twoPointOnPressed: () {
+                  pointsAOnPressed(2);
+                },
+                threePointOnPressed: () {
+                  pointsAOnPressed(3);
+                },
               ),
-              DividerWidget(),
+              const DividerWidget(),
               BodyWidget(
                 teamName: 'Team B',
+                teamPoints: teamBPoints,
+                onePointOnPressed: () {
+                  pointsBOnPressed(1);
+                },
+                twoPointOnPressed: () {
+                  pointsBOnPressed(2);
+                },
+                threePointOnPressed: () {
+                  pointsBOnPressed(3);
+                },
               ),
             ],
           ),
           ResetButtonWidget(
             onPressed: () {
               setState(() {
-                BodyWidgetState.teamPoints = 0;
+                teamAPoints = 0;
+                teamBPoints = 0;
               });
             },
           )
