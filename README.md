@@ -1,1 +1,1 @@
-![home](https://github.com/amirrrra/News-App/assets/117866096/9f71175b-2f07-4cdc-8003-c0cf09826d2d)
+![photo-collage png (1)](https://github.com/amirrrra/News-App/assets/117866096/70377177-4c08-4eec-9efe-98fa90933e41)
