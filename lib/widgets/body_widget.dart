@@ -13,18 +13,18 @@ class BodyWidget extends StatelessWidget {
     required this.teamName,
     this.onePointOnPressed,
     this.twoPointOnPressed,
-    this.threePointOnPressed, required this.teamPoints,
+    this.threePointOnPressed,
+    required this.teamPoints,
   });
 
   @override
   Widget build(BuildContext context) {
-
     return SizedBox(
-      height: 500,
+      height: 550,
       child: Column(
         children: [
           const Spacer(
-            flex: 4,
+            flex: 6,
           ),
           Text(
             teamName,

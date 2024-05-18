@@ -7,12 +7,12 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget{
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: orange,
       title: const Text(
         'Points Counter',
         style: TextStyle(
           fontSize: 22,
-          fontWeight: FontWeight.bold,
-          color: orange,
+          fontWeight: FontWeight.w600,
         ),
       ),
     );
